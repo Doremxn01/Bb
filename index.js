@@ -19,12 +19,12 @@
   var video = document.getElementById('video');
   if(Hls.isSupported()) {
     var hls = new Hls();
-    hls.loadSource('https://arydigital.aryzap.com/ff5f087d60a78eea3940b58f17985e49/63b2655f/v1/0183ea2408f90b8ed5941a38bc72/0183ea24302d0b8ed5941a38bc75/ARYDigitalHDh264_1080p.m3u8');
+    hls.loadSource('https://prod-ent-live-gm.jiocinema.com/hls/live/2105483/hd_akamai_androidmob_avc_24x7_bbhindi_day02/master_1080p.m3u8');
     hls.attachMedia(video);
     video.play();
   }
   else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'https://arydigital.aryzap.com/ff5f087d60a78eea3940b58f17985e49/63b2655f/v1/0183ea2408f90b8ed5941a38bc72/0183ea24302d0b8ed5941a38bc75/ARYDigitalHDh264_1080p.m3u8';
+    video.src = 'https://prod-ent-live-gm.jiocinema.com/hls/live/2105483/hd_akamai_androidmob_avc_24x7_bbhindi_day02/master_1080p.m3u8';
     video.addEventListener('loadedmetadata',function() {
       video.play();
     });
